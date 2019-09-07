@@ -2,10 +2,9 @@ import React from 'react'
 import AddEditForm from './addEditForm'
 import { connect } from 'react-redux'
 import { editExpense } from '../actions/expenses'
+
 const Edit = (props) =>
-
     <div>
-
         <AddEditForm
             expense={props.expenses}
             onSubmit={(update) => {

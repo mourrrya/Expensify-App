@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from 'react-redux'
 import "normalize.css/normalize.css";
 import "./style/style.scss";
+import './firebase/firebase'
 import AppRouter from './routers/appRouter'
 import configureStore from './store/configureStore'
-import { Provider } from 'react-redux'
+
 const store = configureStore()
 
 

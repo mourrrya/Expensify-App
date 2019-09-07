@@ -63,7 +63,7 @@ export default class AddEditForm extends React.Component {
         return (
             <div>
                 {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
+                <form onSubmit={this.onSubmit}> 
                     <input type='text' placeholder='description' value={this.state.description} onChange={this.isDescription} />
                     <input type='text' value={this.state.amount} placeholder='amount' onChange={this.isAmount} />
                     <textarea placeholder='add a note for your expense (optional)' value={this.state.note} onChange={this.isNotes} />
