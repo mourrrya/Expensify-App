@@ -5,7 +5,3 @@ public/main.css
 public/main.css.map
 .vscode
 test
-
-src/actions/auth.js
-playground/
-src/components/loginPage.js
