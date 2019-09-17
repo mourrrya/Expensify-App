@@ -7,15 +7,15 @@ const firebaseConfig = {
   projectId: "expensify-2fcd2",
   storageBucket: "expensify-2fcd2.appspot.com",
   messagingSenderId: "246403672894",
-  appId: "1:246403672894:web:86ac6d07d1fd1c65"
+ appId: "1:246403672894:web:86ac6d07d1fd1c65"
 };
 // Initialize Firebase
-//todo
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database()
+const googleAuthProvider= new firebase.auth.GoogleAuthProvider()
 
-export {firebase, database as default}
+export {firebase, googleAuthProvider, database as default}
 
 
 
