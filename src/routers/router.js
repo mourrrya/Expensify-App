@@ -5,7 +5,7 @@ import Edit from '../components/editExpensePage';
 import ExpenseListPage from '../components/expenseListPage';
 import Header from '../components/header';
 import Help from '../components/help';
-// import Login from '../components/loginPage';
+import Login from '../components/loginPage';
 import PageNotFound from '../components/pageNotFound';
 
 export default () => {
@@ -15,8 +15,8 @@ export default () => {
         <Header />
       </div>
       <Switch>
-
-        <Route path="/" component={ExpenseListPage} exact={true} />
+        <Route path="/" component={Login} exact={true}/>
+        <Route path="/" component={ExpenseListPage} />
         <Route path="/create" component={AddExpense} />
         <Route path="/edit/:id" component={Edit} />
         <Route path="/help" component={Help} />
@@ -26,5 +26,3 @@ export default () => {
   )
   return routes
 }
-
-      //  <Route path="/" component={Login} exact={true}/>
