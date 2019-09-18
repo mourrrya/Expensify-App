@@ -7,6 +7,7 @@ import "./firebase/firebase";
 import AppRouter, { history } from "./routers/router";
 import configureStore from "./store/configureStore";
 import { startSetExpenses } from "./actions/expenses";
+import { login, logout } from "./actions/auth";
 import { firebase } from "./firebase/firebase";
 
 const store = configureStore();
@@ -31,7 +32,7 @@ const render = () => {
 firebase.auth().onAuthStateChanged(user => {
   if (user) {
     // User is signed in.
-    console.log("log in");
+    store.dispatch(login(user.uid))
     store.dispatch(startSetExpenses()).then(() => {
       render();
       if(history.location.pathname==='/'){
@@ -42,6 +43,7 @@ firebase.auth().onAuthStateChanged(user => {
     
   } else {
     // No user is signed in.
+    store.dispatch(logout())    
     render();
     history.push("/");
     console.log("log out");
