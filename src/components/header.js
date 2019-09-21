@@ -9,7 +9,6 @@ const Header = ({ startLogout }) => (
     <div>
       <NavLink to='/' activeClassName="is-active" exact={true}>Home</NavLink>
       <NavLink to='/create' activeClassName="is-active" exact={true}>Add Expense</NavLink>
-      <NavLink to='/help' activeClassName="is-active" exact={true}>Help</NavLink>
       <button onClick={startLogout}>logout</button>
     </div>
   </div>
