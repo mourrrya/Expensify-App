@@ -1,4 +1,4 @@
-import * as firebase from 'firebase'
+import * as firebase from "firebase";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBSYKiXuRHF90_4Ej5ONqnNCcprJzEkKt4",
@@ -7,18 +7,15 @@ const firebaseConfig = {
   projectId: "expensify-2fcd2",
   storageBucket: "expensify-2fcd2.appspot.com",
   messagingSenderId: "246403672894",
- appId: "1:246403672894:web:86ac6d07d1fd1c65"
+  appId: "1:246403672894:web:86ac6d07d1fd1c65"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const database = firebase.database()
-const googleAuthProvider= new firebase.auth.GoogleAuthProvider()
+const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-export {firebase, googleAuthProvider, database as default}
-
-
-
+export { firebase, googleAuthProvider, database as default };
 
 // database.ref().set({
 //   name: 'anil',
@@ -43,9 +40,7 @@ export {firebase, googleAuthProvider, database as default}
 
 // database.ref().update({
 //   'location/city':'mera ghar',
-  // 'physique/weight':70,
-  // 'job/company':'amazon',
-  // 'job/title/designation':'network engineer'
+// 'physique/weight':70,
+// 'job/company':'amazon',
+// 'job/title/designation':'network engineer'
 // })
-
-
